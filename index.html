@@ -1,92 +1,319 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Business Trends Bhopal</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Renatus Wellness Bhopal</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+
 body{
-font-family: Arial;
-margin:0;
-background:#f5f5f5;
+background:#f4f4f4;
+color:#333;
+scroll-behavior:smooth;
 }
 
-header{
-background:#000;
+/* NAVBAR */
+
+nav{
+position:sticky;
+top:0;
+background:#111;
 color:white;
-text-align:center;
-padding:20px;
+display:flex;
+justify-content:space-between;
+padding:15px 8%;
+z-index:999;
 }
 
-.container{
-padding:20px;
+nav a{
+color:white;
+margin:0 10px;
+text-decoration:none;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+background:url("https://images.unsplash.com/photo-1505751172876-fa1923c5c528") center/cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:50px;
+animation:fade 2s ease;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(30px)}
+to{opacity:1}
+}
+
+/* SECTION */
+
+.section{
+padding:80px 10%;
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
 }
 
 .card{
 background:white;
-padding:20px;
-margin:20px 0;
+padding:25px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+/* PRODUCTS */
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:25px;
+}
+
+.product{
+background:white;
+padding:15px;
 border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.product img{
+width:100%;
+border-radius:10px;
+}
+
+/* TESTIMONIAL */
+
+.testimonial{
+text-align:center;
+max-width:700px;
+margin:auto;
+}
+
+/* COUNTER */
+
+.stats{
+display:flex;
+justify-content:space-around;
+text-align:center;
+}
+
+.stat h2{
+font-size:40px;
+color:#007BFF;
+}
+
+/* CONTACT */
+
+form input, form textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border-radius:5px;
+border:1px solid #ccc;
 }
 
 button{
-background:#25D366;
+background:#007BFF;
 color:white;
 border:none;
 padding:12px 20px;
 border-radius:5px;
-font-size:16px;
+cursor:pointer;
 }
-</style>
 
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:24px;
+}
+
+/* DARK MODE */
+
+.dark{
+background:#111;
+color:white;
+}
+
+</style>
 </head>
 
 <body>
 
-<header>
-<h1>Business Trends Bhopal</h1>
-<p>POS Terminal Supplier in Bhopal</p>
-</header>
+<nav>
+<h3>Renatus Wellness</h3>
+<div>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#services">Services</a>
+<a href="#products">Products</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+<i class="fa fa-moon" onclick="toggleDark()"></i>
+</div>
+</nav>
 
-<div class="container">
+<section class="hero" id="home">
+<h1>Renatus Wellness Bhopal</h1>
+</section>
 
-<div class="card">
+<section class="section" id="about">
 <h2>About Us</h2>
-<p>
-Business Trends Bhopal provides high quality POS terminals,
-billing machines and accessories for shops and businesses.
-We provide reliable machines with full support.
-</p>
+<p>Renatus Wellness Bhopal is a growing business networking company helping entrepreneurs connect and grow their business ecosystem.</p>
+</section>
+
+<section class="section" id="services">
+<h2>Services</h2>
+
+<div class="services">
+
+<div class="card">
+<i class="fa fa-network-wired fa-2x"></i>
+<h3>Business Networking</h3>
+<p>Connect with professionals and entrepreneurs.</p>
 </div>
 
 <div class="card">
-<h2>Our Services</h2>
-<ul>
-<li>POS Terminal Supply</li>
-<li>Billing Machine Rolls</li>
-<li>Business Equipment</li>
-<li>24 Hour Support</li>
-</ul>
+<i class="fa fa-chart-line fa-2x"></i>
+<h3>Growth Strategies</h3>
+<p>Learn business scaling strategies.</p>
 </div>
 
 <div class="card">
+<i class="fa fa-users fa-2x"></i>
+<h3>Community</h3>
+<p>Join a powerful entrepreneur network.</p>
+</div>
+
+</div>
+</section>
+
+<section class="section" id="products">
+<h2>Products</h2>
+
+<div class="products">
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db">
+<h4>Health Supplement</h4>
+<p>₹999</p>
+<button>View Details</button>
+</div>
+
+<div class="product">
+<img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88">
+<h4>Wellness Product</h4>
+<p>₹1299</p>
+<button>View Details</button>
+</div>
+
+</div>
+</section>
+
+<section class="section stats">
+
+<div class="stat">
+<h2 id="clients">0</h2>
+<p>Clients</p>
+</div>
+
+<div class="stat">
+<h2 id="partners">0</h2>
+<p>Partners</p>
+</div>
+
+<div class="stat">
+<h2 id="success">0</h2>
+<p>Success Stories</p>
+</div>
+
+</section>
+
+<section class="section testimonial" id="reviews">
+<h2>Customer Reviews</h2>
+<p>"Amazing networking opportunities and business growth."</p>
+⭐ ⭐ ⭐ ⭐
+</section>
+
+<section class="section" id="contact">
+
 <h2>Contact Us</h2>
 
-<p><b>Phone:</b> 08962573188</p>
-
-<p><b>Location:</b><br>
-MP Nagar Zone-1,<br>
-Maharana Pratap Nagar,<br>
-Bhopal, Madhya Pradesh 462011
+<p>
+7C3H+CMC, Bagh Dilkusha,<br>
+New Subhash Nagar, Ashoka Garden,<br>
+Bhopal, Madhya Pradesh
 </p>
 
-<a href="https://wa.me/918962573188">
-<button>Chat on WhatsApp</button>
+<iframe
+src="https://maps.google.com/maps?q=bhopal&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%" height="300">
+</iframe>
+
+<form>
+<input type="text" placeholder="Your Name">
+<input type="email" placeholder="Your Email">
+<textarea placeholder="Message"></textarea>
+<button>Send Message</button>
+</form>
+
+</section>
+
+<a href="https://wa.me/" class="whatsapp">
+<i class="fab fa-whatsapp"></i>
 </a>
 
-</div>
+<script>
 
-</div>
+function toggleDark(){
+document.body.classList.toggle("dark");
+}
+
+let count=0;
+
+let interval=setInterval(()=>{
+count++;
+document.getElementById("clients").innerText=count*5;
+document.getElementById("partners").innerText=count*3;
+document.getElementById("success").innerText=count*2;
+
+if(count==50)clearInterval(interval);
+
+},50)
+
+</script>
 
 </body>
 </html>
