@@ -3,151 +3,105 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Renatus Wellness Bhopal</title>
+<title>Rashmi Collection Bhopal</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-
 body{
-background:#f4f4f4;
-color:#333;
-scroll-behavior:smooth;
+font-family:Poppins;
+margin:0;
+background:#f8f8f8;
 }
 
-/* NAVBAR */
-
-nav{
-position:sticky;
-top:0;
-background:#111;
+header{
+background:black;
 color:white;
+padding:15px;
 display:flex;
 justify-content:space-between;
-padding:15px 8%;
-z-index:999;
+align-items:center;
 }
 
 nav a{
 color:white;
-margin:0 10px;
+margin:10px;
 text-decoration:none;
+font-weight:500;
 }
 
-/* HERO */
-
 .hero{
-height:90vh;
-background:url("https://images.unsplash.com/photo-1505751172876-fa1923c5c528") center/cover;
+height:80vh;
+background:url("https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf") center/cover;
 display:flex;
 align-items:center;
 justify-content:center;
-text-align:center;
 color:white;
+text-align:center;
 }
 
 .hero h1{
-font-size:50px;
-animation:fade 2s ease;
+font-size:45px;
+background:rgba(0,0,0,0.5);
+padding:20px;
+border-radius:10px;
 }
 
-@keyframes fade{
-from{opacity:0;transform:translateY(30px)}
-to{opacity:1}
-}
-
-/* SECTION */
-
-.section{
-padding:80px 10%;
-}
-
-/* SERVICES */
-
-.services{
+.products{
+padding:40px;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
 .card{
 background:white;
-padding:25px;
-border-radius:12px;
-text-align:center;
+border-radius:10px;
 box-shadow:0 5px 20px rgba(0,0,0,0.1);
+overflow:hidden;
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:scale(1.05);
 }
 
-/* PRODUCTS */
-
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:25px;
-}
-
-.product{
-background:white;
-padding:15px;
-border-radius:10px;
-text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-.product img{
+.card img{
 width:100%;
-border-radius:10px;
+height:250px;
+object-fit:cover;
 }
 
-/* TESTIMONIAL */
-
-.testimonial{
-text-align:center;
-max-width:700px;
-margin:auto;
+.card h3{
+padding:10px;
 }
 
-/* COUNTER */
-
-.stats{
-display:flex;
-justify-content:space-around;
-text-align:center;
-}
-
-.stat h2{
-font-size:40px;
-color:#007BFF;
-}
-
-/* CONTACT */
-
-form input, form textarea{
-width:100%;
-padding:12px;
-margin:10px 0;
-border-radius:5px;
-border:1px solid #ccc;
-}
-
-button{
-background:#007BFF;
+.card button{
+margin:10px;
+padding:10px 20px;
+background:black;
 color:white;
 border:none;
-padding:12px 20px;
 border-radius:5px;
-cursor:pointer;
 }
 
-/* WHATSAPP */
+.about{
+padding:40px;
+background:white;
+text-align:center;
+}
+
+.map{
+padding:40px;
+}
+
+footer{
+background:black;
+color:white;
+text-align:center;
+padding:20px;
+}
 
 .whatsapp{
 position:fixed;
@@ -157,14 +111,8 @@ background:#25D366;
 color:white;
 padding:15px;
 border-radius:50%;
-font-size:24px;
-}
-
-/* DARK MODE */
-
-.dark{
-background:#111;
-color:white;
+font-size:22px;
+text-decoration:none;
 }
 
 </style>
@@ -172,148 +120,64 @@ color:white;
 
 <body>
 
+<header>
+<h2>Rashmi Collection</h2>
 <nav>
-<h3>Renatus Wellness</h3>
-<div>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
+<a href="#">Home</a>
 <a href="#products">Products</a>
-<a href="#reviews">Reviews</a>
+<a href="#about">About</a>
 <a href="#contact">Contact</a>
-<i class="fa fa-moon" onclick="toggleDark()"></i>
-</div>
 </nav>
+</header>
 
-<section class="hero" id="home">
-<h1>Renatus Wellness Bhopal</h1>
+<section class="hero">
+<h1>Latest Fashion Collection in Bhopal</h1>
 </section>
 
-<section class="section" id="about">
-<h2>About Us</h2>
-<p>Renatus Wellness Bhopal is a growing business networking company helping entrepreneurs connect and grow their business ecosystem.</p>
-</section>
-
-<section class="section" id="services">
-<h2>Services</h2>
-
-<div class="services">
+<section class="products" id="products">
 
 <div class="card">
-<i class="fa fa-network-wired fa-2x"></i>
-<h3>Business Networking</h3>
-<p>Connect with professionals and entrepreneurs.</p>
-</div>
-
-<div class="card">
-<i class="fa fa-chart-line fa-2x"></i>
-<h3>Growth Strategies</h3>
-<p>Learn business scaling strategies.</p>
-</div>
-
-<div class="card">
-<i class="fa fa-users fa-2x"></i>
-<h3>Community</h3>
-<p>Join a powerful entrepreneur network.</p>
-</div>
-
-</div>
-</section>
-
-<section class="section" id="products">
-<h2>Products</h2>
-
-<div class="products">
-
-<div class="product">
-<img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db">
-<h4>Health Supplement</h4>
-<p>₹999</p>
+<img src="https://images.unsplash.com/photo-1593032465171-8e3b9e2c3a3f">
+<h3>Designer Saree</h3>
 <button>View Details</button>
 </div>
 
-<div class="product">
-<img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88">
-<h4>Wellness Product</h4>
-<p>₹1299</p>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1610030469668-6c1c77f076c0">
+<h3>Wedding Lehenga</h3>
 <button>View Details</button>
 </div>
 
-</div>
-</section>
-
-<section class="section stats">
-
-<div class="stat">
-<h2 id="clients">0</h2>
-<p>Clients</p>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1618354691321-56c60c2c6b8c">
+<h3>Party Wear Suit</h3>
+<button>View Details</button>
 </div>
 
-<div class="stat">
-<h2 id="partners">0</h2>
-<p>Partners</p>
-</div>
-
-<div class="stat">
-<h2 id="success">0</h2>
-<p>Success Stories</p>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1593032457869-bfb7c4e6b3a9">
+<h3>Traditional Dress</h3>
+<button>View Details</button>
 </div>
 
 </section>
 
-<section class="section testimonial" id="reviews">
-<h2>Customer Reviews</h2>
-<p>"Amazing networking opportunities and business growth."</p>
-⭐ ⭐ ⭐ ⭐
+<section class="about" id="about">
+<h2>About Rashmi Collection</h2>
+<p>Rashmi Collection is a fashion store in Bhopal offering designer sarees, lehengas, suits and traditional wear for weddings and special occasions.</p>
 </section>
 
-<section class="section" id="contact">
-
-<h2>Contact Us</h2>
-
-<p>
-7C3H+CMC, Bagh Dilkusha,<br>
-New Subhash Nagar, Ashoka Garden,<br>
-Bhopal, Madhya Pradesh
-</p>
-
-<iframe
-src="https://maps.google.com/maps?q=bhopal&t=&z=13&ie=UTF8&iwloc=&output=embed"
-width="100%" height="300">
-</iframe>
-
-<form>
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea placeholder="Message"></textarea>
-<button>Send Message</button>
-</form>
-
+<section class="map">
+<iframe src="https://maps.google.com/maps?q=ashoka%20garden%20bhopal&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%" height="300"></iframe>
 </section>
 
-<a href="https://wa.me/" class="whatsapp">
-<i class="fab fa-whatsapp"></i>
-</a>
+<footer id="contact">
+<p>📍 Ashoka Garden, Bhopal</p>
+<p>📞 08305999936</p>
+</footer>
 
-<script>
-
-function toggleDark(){
-document.body.classList.toggle("dark");
-}
-
-let count=0;
-
-let interval=setInterval(()=>{
-count++;
-document.getElementById("clients").innerText=count*5;
-document.getElementById("partners").innerText=count*3;
-document.getElementById("success").innerText=count*2;
-
-if(count==50)clearInterval(interval);
-
-},50)
-
-</script>
+<a class="whatsapp" href="https://wa.me/918305999936">💬</a>
 
 </body>
 </html>
